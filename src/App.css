@@ -1,0 +1,151 @@
+.logo {
+  width: 17rem;
+  height: auto;
+  position: absolute;
+  top: -1rem;
+  left: 0rem;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 3px 67px;
+  grid-auto-flow: row;
+  padding: 2rem;
+}
+
+.form-container,
+.output {
+  background-color: white;
+  border-radius: 1.5rem;
+  position: relative;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 5rem;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Create two equal columns */
+  gap: 2rem; /* Adjust the gap between the items */
+}
+.submit-container {
+  grid-column: span 2; /* Make the submit button span both columns */
+  display: flex;
+  justify-content: center; /* Center the button horizontally */
+  margin-top: 2rem; /* Add some space above the button */
+}
+
+/* From Uiverse.io by Maximinodotpy */
+.inputGroup {
+  font-family: "Segoe UI", sans-serif;
+  margin: 1em 0 1em 0;
+  max-width: 20rem;
+  position: relative;
+}
+
+.inputGroup input {
+  font-size: 100%;
+  padding: 0.8em;
+  outline: none;
+  border: 2px solid rgb(200, 200, 200);
+  background-color: transparent;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.inputGroup label {
+  font-size: 100%;
+  position: absolute;
+  left: 0;
+  padding: 0.8em;
+  margin-left: 0.5em;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  color: rgb(100, 100, 100);
+}
+
+.inputGroup :is(input:focus, input:valid) ~ label {
+  transform: translateY(-50%) scale(0.9);
+  margin: 0em;
+  margin-left: 1.3em;
+  padding: 0.4em;
+  background-color: #ffffff;
+  color: rgb(23, 177, 43);
+  border-radius: 100%;
+}
+
+.inputGroup :is(input:focus, input:valid) {
+  border-color: rgb(23, 177, 43);
+}
+
+.leaves {
+  position: absolute;
+  width: 5rem;
+  height: auto;
+  opacity: 0.5;
+}
+
+.leaf1 {
+  top: 30rem;
+  left: 15rem;
+  rotate: 50deg;
+}
+
+.leaf2 {
+  top: 35rem;
+  left: 30rem;
+  rotate: -50deg;
+}
+
+.leaf3 {
+  top: 0rem;
+  left: 30rem;
+  rotate: -130deg;
+}
+
+.leaf4 {
+  top: 45rem;
+  left: 5rem;
+  rotate: 50deg;
+}
+
+.leaf5 {
+  top: 35rem;
+  left: 10rem;
+  rotate: 50deg;
+}
+
+.leaf6 {
+  top: 0rem;
+  left: 60rem;
+  rotate: -155deg;
+}
+
+.leaf7 {
+  top: 5rem;
+  left: 2rem;
+  rotate: 40deg;
+  width: 10rem;
+}
+
+.leaf8 {
+  top: 20rem;
+  left: 65rem;
+  rotate: 0deg;
+}
+
+.output {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}

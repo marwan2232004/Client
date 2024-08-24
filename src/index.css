@@ -1,0 +1,39 @@
+:root {
+  font-family: "Anonymous Pro", monospace;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  user-select: none;
+}
+
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 2px;
+  line-height: calc(1em+0.5rem);
+  cursor: default;
+}
+
+body {
+  overflow-x: hidden;
+  background-image: url('./assets/background1.jpg'); /* Adjust the path as necessary */
+  /* background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;  */
+}
+a {
+  text-decoration: none;
+}
+img,
+svg {
+  user-select: none;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
