@@ -31,7 +31,7 @@ function App() {
   useEffect(() => {
     const fetchAccuracyData = async () => {
       try {
-        const response = await fetch("http://localhost:8000/accuracy");
+        const response = await fetch("https://joyous-becky-cropsprediciton-c4cd7ffa.koyeb.app/accuracy");
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
@@ -71,7 +71,7 @@ function App() {
 
     console.log("Form data:", formDataAsFloats);
     try {
-      const response = await fetch("http://localhost:8000/predict", {
+      const response = await fetch("https://joyous-becky-cropsprediciton-c4cd7ffa.koyeb.app/predict", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
