@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import leaf1 from "./assets/_611867016.svg";
 import leaf2 from "./assets/_613281272.svg";
-import leaf3 from "./assets/_614644872.svg";
-import leaf4 from "./assets/_678544264.svg";
-import leaf5 from "./assets/_681515824.svg";
 import leaf6 from "./assets/_613663552.svg";
 import leaf7 from "./assets/_614047480.svg";
+import leaf3 from "./assets/_614644872.svg";
 import leaf8 from "./assets/_614656440.svg";
+import leaf4 from "./assets/_678544264.svg";
+import leaf5 from "./assets/_681515824.svg";
 import logo from "./assets/logo.png";
 import SubmitButton from "./components/submitButton";
 
@@ -31,7 +31,9 @@ function App() {
   useEffect(() => {
     const fetchAccuracyData = async () => {
       try {
-        const response = await fetch("https://joyous-becky-cropsprediciton-c4cd7ffa.koyeb.app/accuracy");
+        const response = await fetch(
+          "https://joyous-becky-cropsprediciton-c4cd7ffa.koyeb.app/accuracy"
+        );
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
@@ -71,13 +73,16 @@ function App() {
 
     console.log("Form data:", formDataAsFloats);
     try {
-      const response = await fetch("https://joyous-becky-cropsprediciton-c4cd7ffa.koyeb.app/predict", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formDataAsFloats),
-      });
+      const response = await fetch(
+        "https://joyous-becky-cropsprediciton-c4cd7ffa.koyeb.app/predict",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formDataAsFloats),
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Network response was not ok");
@@ -95,13 +100,12 @@ function App() {
 
   return (
     <>
-      <div className="container">
-    
+      <div className="grid">
         <div className="form-container">
-        <img className="leaves leaf1" src={leaf1} />
-        <img className="leaves leaf2" src={leaf2} />
-        <img className="leaves leaf3" src={leaf3} />
-        <img className="leaves leaf4" src={leaf4} />
+          <img className="leaves leaf1" src={leaf1} />
+          <img className="leaves leaf2" src={leaf2} />
+          <img className="leaves leaf3" src={leaf3} />
+          <img className="leaves leaf4" src={leaf4} />
           <div>
             <img className="logo" src={logo} alt="Sample" />
           </div>
@@ -127,10 +131,10 @@ function App() {
         </div>
 
         <div className="output">
-        <img className="leaves leaf5" src={leaf5} />
-        <img className="leaves leaf6" src={leaf6} />
-        <img className="leaves leaf7" src={leaf7} />
-        <img className="leaves leaf8" src={leaf8} />
+          <img className="leaves leaf5" src={leaf5} />
+          <img className="leaves leaf6" src={leaf6} />
+          <img className="leaves leaf7" src={leaf7} />
+          <img className="leaves leaf8" src={leaf8} />
           <ModelAccuracyChart accuracyData={accuracyData} />
           <ComparisonChart data={predictions} />
         </div>

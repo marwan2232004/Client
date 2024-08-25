@@ -23,9 +23,7 @@
 body {
   overflow-x: hidden;
   background-image: url('./assets/background1.jpg'); /* Adjust the path as necessary */
-  /* background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;  */
+  background-size: cover;
 }
 a {
   text-decoration: none;
@@ -36,4 +34,61 @@ svg {
 }
 *::-webkit-scrollbar {
   display: none;
+}
+
+
+.container {
+  max-width: 1536px;
+  margin-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+
+/* 2xl */
+@media (max-width: 1536px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* xl */
+@media (max-width: 1280px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+/* lg */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+/* md */
+@media (max-width: 768px) {
+  .container {
+    max-width: 640px;
+  }
+  body::-webkit-scrollbar {
+   display: none ;
+  }
+   
+}
+
+/* sm */
+@media (max-width: 640px) {
+  .container {
+    max-width: 475px;
+  }
+}
+
+/* xs */
+@media (max-width: 475px) {
+  .container {
+    width: 100%;
+  }
 }

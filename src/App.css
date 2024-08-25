@@ -1,12 +1,4 @@
-.logo {
-  width: 17rem;
-  height: auto;
-  position: absolute;
-  top: -1rem;
-  left: 0rem;
-}
-
-.container {
+.grid {
   width: 100vw;
   height: 100vh;
   display: grid;
@@ -21,14 +13,17 @@
   background-color: white;
   border-radius: 1.5rem;
   position: relative;
+  overflow: hidden;
 }
 
 .form-container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   padding-bottom: 5rem;
+  width: 39rem;
+  height: 53rem;
 }
 
 .form {
@@ -47,7 +42,7 @@
 .inputGroup {
   font-family: "Segoe UI", sans-serif;
   margin: 1em 0 1em 0;
-  max-width: 20rem;
+  /* max-width: 20rem; */
   position: relative;
 }
 
@@ -95,7 +90,7 @@
 
 .leaf1 {
   top: 30rem;
-  left: 15rem;
+  left: 15em;
   rotate: 50deg;
 }
 
@@ -119,8 +114,8 @@
 
 .leaf5 {
   top: 35rem;
-  left: 10rem;
-  rotate: 50deg;
+  left: 5rem;
+  rotate: -50deg;
 }
 
 .leaf6 {
@@ -148,4 +143,31 @@
   justify-content: center;
   align-items: center;
   padding: 2rem;
+  height: 53rem;
+}
+
+.logo {
+  width: 17rem;
+  height: auto;
+}
+
+/* 2xl */
+@media (max-width: 1536px) {
+  .grid {
+    width: auto;
+    height: auto;
+    justify-items: center;
+    grid-template-columns: 1fr;
+  }
+  .form-container {
+    margin-bottom: 3rem;
+  }
+  .output {
+    margin-top: 2rem;
+    width: 80%;
+  }
+  .leaf5 {
+    top: 30rem;
+    left: 40rem;
+  }
 }
